@@ -1,0 +1,318 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* MY STYLE */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+html {
+    font-size: 62.5%;
+    --base-bg-color: #22242A;
+    --darker-bg-color: #1B1E22;
+    --blue-color: #1774F9;
+    --game-font: 'Press Start 2P', cursive
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-rows: 1fr 5fr 1fr;
+
+}
+
+/* HEADER */
+
+.header {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    background-color: var(--base-bg-color);
+}
+
+.logo-div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--game-font);
+}
+
+.logo-div h1 {
+    font-size: 5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.logo-div .oh {
+    color: var(--blue-color);
+}
+
+/* MAIN */
+.main {
+    display: grid;
+    grid-template-columns: 4fr 2fr;
+}
+
+/* LEFT MAIN */
+.left-main {
+    display: grid;
+    grid-template-rows: 5fr 1fr;
+
+}
+
+/* LEFT MAIN UP */
+.left-main-up {
+    display: grid;
+    place-items: center;
+
+}
+
+.board {
+    background-color: var(--darker-bg-color);
+    width: 40%;
+    height: 70%;
+    display: grid;
+    grid-template: repeat(3, minmax(40px, 1fr)) / repeat(3, minmax(40px, 1fr));
+    border: 5px solid var(--darker-bg-color);
+    border-radius: 15px;
+}
+
+.board .square {
+    border: 5px solid var(--darker-bg-color);
+    border-radius: 10px;
+    background-color: var(--base-bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 6rem;
+    font-family: var(--game-font);
+
+}
+
+/*LEFT MAIN DOWN  */
+
+.left-main-down {
+    /* background-color: red; */
+    display: grid;
+    grid-template-rows: 1fr;
+    place-items: center;
+
+}
+
+.score-board {
+    /* background-color: blue; */
+    width: 60%;
+    height: 80%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+
+}
+
+.score {
+    background-color: #1774F9;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    font-size: 5rem;
+    font-family: var(--game-font);
+    border-radius: 10px;
+}
+
+.vs {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    font-size: 3rem;
+    font-family: var(--game-font);
+}
+
+.player {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: var(--darker-bg-color);
+}
+
+.player-x {
+    border-right: 5px solid var(--darker-bg-color);
+    color: white;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.player-o {
+    border-left: 5px solid var(--darker-bg-color);
+    color: var(--blue-color);
+    border-radius: 0px 10px 10px 0px;
+}
+
+
+/* RIGHT MAIN */
+.right-main {
+    display: grid;
+    place-items: center;
+}
+
+.r-m-inner-box {
+    height: 30%;
+    width: 60%;
+    background-color: var(--base-bg-color);
+    font-size: 1.5rem;
+    font-family: var(--game-font);
+    color: white;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 20px;
+}
+
+
+
+
+/* FOOTER */
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-family: var(--game-font);
+}
