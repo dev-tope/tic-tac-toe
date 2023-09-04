@@ -290,8 +290,8 @@ html {
 }
 
 .r-m-inner-box {
-    height: 30%;
-    width: 60%;
+    height: 60%;
+    width: 70%;
     background-color: var(--base-bg-color);
     font-size: 1.5rem;
     font-family: var(--game-font);
@@ -303,8 +303,56 @@ html {
     border-radius: 20px;
 }
 
+.r-n-inner-box {
+    height: 20%;
+    width: 60%;
+    background-color: var(--base-bg-color);
+    border-radius: 20px;
+    color: white;
+    font-size: 1.7rem;
+    font-family: var(--game-font);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
 
+.white {
+    color: white;
+}
 
+.blue {
+    color: var(--blue-color);
+}
+
+/* MODAL */
+.overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    z-index: 2;
+    display:none;
+    position: fixed;
+}
+
+.announce {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.winner {
+    height: 20%;
+    width: 60%;
+    color: white;
+    /* background-color: var(--base-bg-color); */
+    font-size: 6.7rem;
+    font-weight: bold;
+    font-family: var(--game-font);
+}
 
 /* FOOTER */
 
